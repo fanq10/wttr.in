@@ -20,8 +20,8 @@ jobs:
         with:
           server_address: smtp.163.com
           server_port: 465
-          username: fanq10@163.com
-          password: QcfcPG6xVeznobi#
+          username: ${{mailrelay.MAIL_USERNAME}}
+          password: ${{mailrelay.MAIL_PASSWORD}}
           subject: Auckland Weather Report (${{env.REPORT_DATE}})
           body: file://result.html
           to: jacky@fan.nz
